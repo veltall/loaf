@@ -1,0 +1,127 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: "Open Sans", sans-serif;
+}
+
+body {
+  margin: 1em;
+  background-color: black;
+  color: white;
+}
+/* body::before {
+  content: "";
+  width: 1px;
+  height: 100vh;
+  background-color: red;
+  position: absolute;
+  left: 50vw;
+} */
+
+header {
+  position: sticky;
+  top: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+header img {
+  margin: 0;
+}
+
+header img.logo-image {
+  width: 15vw;
+}
+header img.nav-image {
+  width: 7vw;
+}
+
+.intro {
+  font-size: 2.1rem;
+  padding: 1em 1em 0 0;
+}
+.intro a {
+  text-decoration: none;
+  /* color: white; */
+}
+.intro a::after {
+  content: "\f35d";
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  position: relative;
+  display: inline-block;
+  width: 0.5em;
+  aspect-ratio: 1;
+  margin: 0 0.3em;
+}
+.scroll-indicator {
+  display: flex;
+  width: calc(100vw - 2em);
+  justify-content: center;
+  /* margin-bottom: 100%; */
+}
+.scroll-indicator::before {
+  content: "Work";
+  position: absolute;
+  justify-content: center;
+  bottom: 12vh;
+}
+.scroll-indicator::after {
+  content: "";
+  width: 1px;
+  height: 15vh;
+  background-color: white;
+  position: absolute;
+  left: 50vw;
+  bottom: -7vh;
+}
+
+/* Scrolling reveal / hide */
+.reveal {
+  position: relative;
+  transform: translateY(150px);
+  opacity: 0;
+  transition: 2s all ease;
+}
+.reveal.active {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.hide {
+  opacity: 1;
+  transition: 2s all ease;
+}
+.hide.active {
+  opacity: 0;
+}
+/* --------- */
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  margin-top: 100%;
+}
+.hero {
+  margin-top: 2em;
+}
+.hero-image {
+  width: calc(100vw - 2em);
+  object-fit: none;
+  object-position: center;
+  aspect-ratio: 7/10;
+}
+.meta p {
+  font-size: 85%;
+}
+.meta .meta-title {
+  font-size: 2em;
+  margin-top: 0;
+}
