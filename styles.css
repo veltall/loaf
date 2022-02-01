@@ -206,7 +206,7 @@ header.invert {
 }
 
 /* tablet size */
-@media (min-width: 600px) and (max-width: 1024px) {
+@media (min-width: 600px) and (max-width: 1023px) {
   html {
     --content-margin: min(5vw, 3em, 5vh);
   }
@@ -233,7 +233,7 @@ header.invert {
     --content-margin: 3em;
   }
   .intro {
-    font-size: 3em;
+    font-size: clamp(2.3em, 3vw, 4em);
     width: 88%;
     margin-top: 1.5em;
   }
@@ -243,6 +243,9 @@ header.invert {
   }
   .hero-image {
     object-fit: cover;
+  }
+  .meta {
+    font-size: clamp(1em, 2vw, 2em);
   }
   [class|="item"]:nth-child(1) {
     display: flex;
@@ -360,5 +363,8 @@ header.invert {
   }
   #correspondence > * {
     flex-basis: 30%;
+  }
+  .copyright {
+    width: 90%;
   }
 }
